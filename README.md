@@ -24,3 +24,24 @@ Met de presentaties zijn we iets van 1,5 tot 2 uurtjes mee bezig geweest. We had
 **Wat ga ik morgen doen**
 
 Morgen gaan we bespreken in clubjes wat we gaan doen. Dit doen we voor browser technologies en voor css to the rescue. Ook wil ik alvast een begin maken aan m'n blog.
+
+
+## *19 februari 2026*
+### Check-out (met Alexia)
+**Wat heb ik vandaag gedaan**
+
+Ik ben vandaag begonnen aan het maken van de control panel. Ik wil als control panel een nintendo switch gaan maken. Tot nu toe heb ik alleen wat divjes en heb ze geprobeerd te stylen, maar dat ging wat lastiger dan gedacht. Ook ben ik begonnen aan responsiveness maar dat lukt totaal niet nog.
+
+
+**Hoeveel tijd heeft dat mij gekost**
+
+Dit heeft mij de hele les gekost
+
+**Wat heb ik geleerd**
+
+Ik heb niet heel veel geleerd vandaag. Ik probeerde wat meer over grids te leren, maar dat gaat nog niet helemaal goed. 
+
+**Wat ga ik morgen doen**
+
+Morgen ga ik verder met de responsiveness van de switch. Ik wil er voor zorgen dat als het scherm op mobiel formaat is dat hetr scherm van de switch in de bovenste helft van het scherm zit en de joycons onderaan. Bij laptop formaat moet het allemaal een geheel zijn
+
