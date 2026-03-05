@@ -26,7 +26,7 @@ Met de presentaties zijn we iets van 1,5 tot 2 uurtjes mee bezig geweest. We had
 Morgen gaan we bespreken in clubjes wat we gaan doen. Dit doen we voor browser technologies en voor css to the rescue. Ook wil ik alvast een begin maken aan m'n blog.
 
 
-## *19 februari 2026*
+## *4 maart 2026*
 ### Check-out (met Alexia)
 **Wat heb ik vandaag gedaan**
 
@@ -45,3 +45,20 @@ Ik heb niet heel veel geleerd vandaag. Ik probeerde wat meer over grids te leren
 
 Morgen ga ik verder met de responsiveness van de switch. Ik wil er voor zorgen dat als het scherm op mobiel formaat is dat hetr scherm van de switch in de bovenste helft van het scherm zit en de joycons onderaan. Bij laptop formaat moet het allemaal een geheel zijn
 
+## *5 maart 2026*
+### Check-out (met Nienke)
+**Wat heb ik vandaag gedaan**
+
+Ik ben vandaag verder gegaan met het designen van de nintendo switch. De basis van de switch staat er wel nu. Alleen is die nog niet responsive. 
+
+**Hoeveel tijd heeft dat mij gekost**
+
+Dit heeft mij de hele les gekost.
+
+**Wat heb ik geleerd**
+
+Hoe ik geneste divs moet selecten. Ik ben erachter gekomen dat grid-template-areas ook een ding zijn, dus daar kan ik ook mee werken. 
+
+**Wat ga ik morgen doen**
+
+Morgen feedback en verhuizen
