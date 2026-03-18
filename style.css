@@ -1,49 +1,298 @@
-* {
-    padding: 0;
-    margin: 0;
+:root {
+  color-scheme: light dark;
+  --clr-left: #00C0E1;
+  --clr-right: #FD5F53;
+  --clr-dark: #666C73;
+  --txt-color-btn: white;
 }
 
-:root {
-    --clr-left: #00C0E1;
-    --clr-right: #FD5F53;
-    --clr-dark: #666C73;
+@font-face {
+  font-family: controllers;
+  src: url(fonts/Controllers.woff2);
 }
+
+@font-face {
+  font-family: pretendo;
+  src: url(fonts/pretendo.woff2);
+}
+
 
 body {
+  background-image: url(images/background-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/*DE HOOFDCONTAINER*/
+body > div:first-of-type {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; 
+  aspect-ratio: 21 / 9; /* Vloeiende desktop-verhouding */
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto; 
+}
+
+/*LINKER JOY-CON*/
+body > div:first-of-type > div:nth-child(1) {
+  /* De background-color gebruikt nu onze veilige variabele */
+  background-color: var(--clr-left);
+  border-radius: 30px 0 0 30px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*HET SCHERM*/
+body > div:first-of-type > div:nth-child(2) {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+  font-family: pretendo, "impact";
+}
+
+/*RECHTER JOY-CON*/
+body > div:first-of-type > div:nth-child(3) {
+  /* De background-color gebruikt nu onze veilige variabele */
+  background-color: var(--clr-right);
+  border-radius: 0 30px 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*DE STICKS*/
+body > div:first-of-type > div:nth-child(1) > div:nth-child(1),
+body > div:first-of-type > div:nth-child(3) > div:nth-child(2) {
+  width: 40%; 
+  aspect-ratio: 1 / 1; 
+  background-color: #222;
+  border-radius: 50%;
+}
+
+/*Button pijltje omhoog*/
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(1) {
+    rotate: 225deg;
+    color: var(--txt-color-btn);
+}
+
+/*Button pijltje naar rechts*/
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(2) {
+    rotate: 320deg;
+    color: var(--txt-color-btn);
+}
+
+/*Button pijltje naar links*/
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(3) {
+    rotate: 140deg;
+    color: var(--txt-color-btn);
+}
+
+/*Button pijltje omlaag*/
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(4) {
+    rotate: 45deg;
+    color: var(--txt-color-btn);
+}
+
+/*Buttons A, B, X, Y*/
+body > div:first-of-type > div:nth-child(3) > div:nth-child(1) > button {
+    rotate: -45deg;
+    color: var(--txt-color-btn);
+}
+
+/*DE KNOPPEN GRIDS*/
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2),
+body > div:first-of-type > div:nth-child(3) > div:nth-child(1) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50%; 
+  gap: 15%; 
+  aspect-ratio: 1 / 1;
+  rotate: 45deg;
+}
+
+/*DE BUTTONS RESETTEN*/
+body > div:first-of-type button {
+  width: 100%; 
+  aspect-ratio: 1 / 1; 
+  background-color: #111;
+  border-radius: 50%;
+  border: none; 
+  padding: 0;
+  cursor: pointer; 
+
+  animation: all 1s ease;
+}
+
+body > div:first-of-type button:active {
+  transform: scale(0.85);
+  background-color: #000; 
+}
+
+label {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  color: black;
+}
+
+label:nth-of-type(3) {
+  opacity: 0;
+}
+
+
+
+/* =========================================
+   MOBIELE LAY-OUT (Schermen kleiner dan 600px) 
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        transition: 1s ease linear;
+    }
+  
+  body > div:first-of-type {
+    grid-template-columns: 1fr 1fr; 
+    aspect-ratio: auto; /* Zet desktop-verhouding uit op mobiel */
+    gap: 20px; 
+    max-width: 400px; 
+  }
+
+  /* Het Scherm */
+  body > div:first-of-type > div:nth-child(2) {
+    grid-column: 1 / span 2; 
+    order: 1;
+    aspect-ratio: 16 / 9; 
+    border-radius: 5px; 
+  }
+
+/* Linker & Rechter Joy-Con samen aanpakken voor de grootte */
+  body > div:first-of-type > div:nth-child(1),
+  body > div:first-of-type > div:nth-child(3) {
+    width: 50%; 
+    justify-self: center; 
+    
+    aspect-ratio: 1 / 2.5; 
+  }
+
+  body > div:first-of-type > div:nth-child(1) {
+    order: 2; 
+    border-radius: 30px 0 0 30px;
+  }
+
+  body > div:first-of-type > div:nth-child(3) {
+    order: 3; 
+    border-radius: 0 30px 30px 0;
+  }
+}
+
+@font-face {
+  font-family: bytebounce;
+  src: url(fonts/ByteBounce.woff2);
+} /*https://www.1001fonts.com/bytebounce-font.html by HipFonts*/
+
+html:has([value="donker"]:checked) {
+  --donker:true;
+}
+
+html:has([value="retro"]:checked) {
+  --retro:true;
+}
+
+html:has([value="unreadable"]:checked) {
+  --unreadable:true;
+}
+
+@container style(--donker:true) {
+  body > div:first-of-type > div:nth-child(1), 
+  body > div:first-of-type > div:nth-child(3) {
+    background-color: var(--clr-dark);
+  }
+
+  body {
+    background-image: url(images/background-dark.webp);
+    background-position: center;
+  }
+
+  label {
+    color: white;
+  }
+
+  input[type="checkbox"] {
+    accent-color: white;
+  }
+}
+/* https://codepen.io/shooft/pen/gOyrVgv?editors=1100*/
+
+@container style(--retro:true) {
+  body {
+    background-image: url(images/8-bit-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  body > div:first-of-type > div:nth-child(1), 
+  body > div:first-of-type > div:nth-child(3) {
     background: lightgrey;
+  }
+
+  body > div:first-of-type > div:nth-child(2) {
+    font-family: bytebounce;
+    font-size: 3em;
+  }
+
+  body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(1),
+  body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(2),
+  body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(3),
+  body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(4),
+  body > div:first-of-type > div:nth-child(3) > div:nth-child(1) > button {
+    background: darkred;
+    font-family: bytebounce;
+    font-size: 2em;
+  }
+
+  label {
+    font-family: bytebounce;
+    font-size: 2em;
+  }
+
+  body > div:first-of-type button:active {
+    background-color: #333; 
+    box-shadow: 0 0 25px rgb(11 83 3 / 0.843); 
+    transform: scale(0.95);
+  }
 }
 
-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 90%;
-    margin: 0 auto;
+@container style(--donker:true) and style(--retro:true) {
+  body {
+    background-image: url(images/8-bit-dark.jpg);
+    background-position: left;
+  }
+
+  body > div:first-of-type > div:nth-child(1), 
+  body > div:first-of-type > div:nth-child(3) {
+    background-color: var(--clr-dark);
+  }
+
+  label {
+    color: white;
+  }
+
+  body > div:first-of-type button:active {
+    box-shadow: 0 0 25px rgb(68 8 220 / 0.843);
+  }
 }
 
-
-section {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-}
-
-div:nth-of-type(1) {
-    width: 3em;
-    height: 7em;
-    background: var(--clr-left);
-}
-
-div:nth-of-type(2) {
-    width: 11em;
-    height: 7em;
-    background: black;
-}
-
-div:nth-of-type(3) {
-    width: 3em;
-    height: 7em;
-    background: var(--clr-right);
+@container style(--unreadable:true) {
+  body > div:first-of-type > div:nth-child(2) {
+    font-family: controllers;
+  }
 }

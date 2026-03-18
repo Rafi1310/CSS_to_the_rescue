@@ -62,3 +62,38 @@ Hoe ik geneste divs moet selecten. Ik ben erachter gekomen dat grid-template-are
 **Wat ga ik morgen doen**
 
 Morgen feedback en verhuizen
+
+## *11 maart 2026*
+### Check-out (met Justin)
+**Wat heb ik vandaag gedaan**
+
+
+
+**Hoeveel tijd heeft dat mij gekost**
+
+
+
+**Wat heb ik geleerd**
+
+
+
+**Wat ga ik morgen doen**
+
+
+## *12 maart 2026*
+### Check-out (met )
+**Wat heb ik vandaag gedaan**
+
+Ik heb er voor gezorgd dat de switch responsive is
+
+**Hoeveel tijd heeft dat mij gekost**
+
+Dit heeft mij de hele les gekost
+
+**Wat heb ik geleerd**
+
+Ik heb geleerd hoe ik bij grids er voor kan zorgen dat als het scherm kleiner word dat ik bepaalde elementen los van elkaar kan halen. 
+
+**Wat ga ik morgen doen**
+
+Morgen is er feedback op het vak browser technologies.
