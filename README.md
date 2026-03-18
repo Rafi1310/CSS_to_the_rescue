@@ -25,7 +25,10 @@ Met de presentaties zijn we iets van 1,5 tot 2 uurtjes mee bezig geweest. We had
 
 Morgen gaan we bespreken in clubjes wat we gaan doen. Dit doen we voor browser technologies en voor css to the rescue. Ook wil ik alvast een begin maken aan m'n blog.
 
-
+### Check-out wekelijks
+Ik heb een presentatie moeten houden over hoe containers werken. Ik heb me hier speciaal gefocusd op de style query hierbij.
+Ik heb onderzocht wat ik wil maken. Ik ga voor de control panel. Ik zit te denken om een soort van elektrisch openhaardje te maken. Ik wil hierbij de vlammen van kleur laten kunnen veranderen en animeren. 
+Het andere wat ik misschien zou willen maken is een nintendo switch. Dit lijkt me best leuk omdat ik er zelf ook een heb.
 
 ## *4 maart 2026*
 ### Check-out (met Alexia)
@@ -64,6 +67,9 @@ Hoe ik geneste divs moet selecten. Ik ben erachter gekomen dat grid-template-are
 
 Morgen feedback en verhuizen
 
+### Check-out wekelijks
+Ik heb deze week besloten toch voor de nintendo switch te gaan, omdat ik dit gewoon een leuker onderwerp vind. Deze week heb ik gezorgd dat de styling van mijn switch er is, alleen is het nog niet heel mooi want niks doet het nog eigenlijk en de rechter joycon staan de buttons nog niet goed. De joycons staan ook nog niet onder elkaar, dat kreeg ik deze week nog niet voor elkaar.
+
 ## *11 maart 2026*
 ### Check-out (met Justin)
 **Wat heb ik vandaag gedaan**
@@ -100,6 +106,11 @@ Ik heb geleerd hoe ik bij grids er voor kan zorgen dat als het scherm kleiner wo
 
 Morgen is er feedback op het vak browser technologies.
 
+### Check-out wekelijks
+Ik heb deze week er voor gezorgd dat de switch nu helemaal qua styling goed is. Ook werkt de responsiveness nu helemaal. Als het scherm kleiner word dan gaan de joycons onder het scherm van de switch staan. 
+Tijdens de meeting met het clubje zag ik ook wel echt vooruitgang, maar kwam er wel achter dat ik nog wel een paar dingetjes moet doen om aan de randvoorwaarden te voldoen. Ik ga daarom ook volgende week zorgen dat alles goed genest staat en ook nog een container style query eraan toevoegen.
+Ik ben erachter gekomen dat de light dark scheme nog niet heel goed werkt in chrome als het om responsiveness gaat. De joycons verdwenen de hele tijd als ik het formaat van het scherm verander. De oplossing die ik hiervoor heb gemaakt is een @support als fallback, waarbij die gewoon een vaste kleur doet als de light dark niet werkt.
+
 ## *18 maart 2026*
 ### Check-out (met Jeppe)
 **Wat heb ik vandaag gedaan**
@@ -121,9 +132,19 @@ Morgen ga ik m'n project presenteren
 
 ## Einddocumentatie
 
+Ik ben blij met wat ik gemaakt heb, ook heb ik veel dingen geleerd. Er zijn alleen een aantal punten waar ik wel op moet gaan letten.
 Ik moet veel meer gaan committen. Ik merk dat ik dat vaak vergeet te doen. Als er dan ooit iets fout gaat kan ik teruggaan naar een oudere versie. Dit is iets wat ik bij de volgende vakken beter ga doen. 
+Ook moet ik wat meer screenshots maken van de tussenstanden. Dan kan ik beter vergelijken hoe mijn projecten eruit zagen eerst en nu. Dan kan ik beter progressie zien.
 Ik ben er achter gekomen dat als je geen javascript kan gebruiken dat buttons eigenlijk niet een hele handige keuze zijn. Het enige wat ik ermee kan doen zijn active states erop zetten. Je kan wel de has() gebruiken met css, maar checkboxes stylen als een button blijft een iets makkelijkere oplossing. Dit ga ik onthouden voor volgende projecten. Hierbij zou ik ook beter hebben geleerd hoe ik ik moet stijlen aangezien dat objecten binnen objecten zijn zonder classes te gebruiken. 
 Als ik meer tijd had had ik willen experimenteren met de has() functie in css met buttons om die werkend te krijgen.
+Ik ben vooral trots dat de responsiveness werkt. Dat de joycons onder het scherm komen te staan was echt best een uitdaging.
+Ik heb geexperimenteerd met de light-dark color scheme, maar met de responsiveness werkte dit totaal niet. Ik heb dit daarom ook weggehaald, want het maakte het gewoon echt lelijk.
+Ik ben erachter gekomen dat je heel veel kan doen met css zonder javascript. Vooral met containers en met has() kan je heel veel krachtige dingen met css. Ook ben ik achter veel pseudo-classes gekomen.
+Ik wil voor volgende projecten nog meer achter de kracht van has() komen, want volgensmij kan ik daar nog veel meer mee doen dan wat ik nu gedaan heb.
+
+
+### Easter eggs
+Er zit een easter egg in. Veel plezier met zoeken
 
 ## Bronnenlijst
 
@@ -143,3 +164,4 @@ https://css-tricks.com/complete-guide-css-grid-layout/
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-of-type
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-child
+https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using

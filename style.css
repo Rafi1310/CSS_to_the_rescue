@@ -63,7 +63,6 @@ body > div:first-of-type > div:nth-child(2) {
 
 /*RECHTER JOY-CON*/
 body > div:first-of-type > div:nth-child(3) {
-  /* De background-color gebruikt nu onze veilige variabele */
   background-color: var(--clr-right);
   border-radius: 0 30px 30px 0;
   display: flex;
@@ -153,7 +152,9 @@ label:nth-of-type(3) {
 
 
 
-/* MOBIELE LAY-OUT (Bij minder 600px) */
+/*=================================
+MOBIELE LAY-OUT (Bij minder 600px) 
+==================================*/
 
 @media (max-width: 600px) {
 
@@ -196,6 +197,9 @@ label:nth-of-type(3) {
   }
 }
 
+/*============================================= 
+Container queries om de stijling aan te passen 
+==============================================*/
 
 
 html:has([value="donker"]:checked) {
@@ -245,7 +249,7 @@ html:has([value="unreadable"]:checked) {
   }
 
   body > div:first-of-type > div:nth-child(2) {
-    font-family: bytebounce;
+    font-family: bytebounce, sans-serif;
     font-size: 3em;
   }
 
@@ -255,12 +259,12 @@ html:has([value="unreadable"]:checked) {
   body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(4),
   body > div:first-of-type > div:nth-child(3) > div:nth-child(1) > button {
     background: darkred;
-    font-family: bytebounce;
+    font-family: bytebounce, sans-serif;
     font-size: 2em;
   }
 
   label {
-    font-family: bytebounce;
+    font-family: bytebounce, sans-serif;
     font-size: 2em;
   }
 
