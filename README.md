@@ -155,7 +155,7 @@ Ik wil voor volgende projecten nog meer achter de kracht van has() komen, want v
 
 
 ### Easter eggs
-Er zit een easter egg in. Veel plezier met zoeken
+Er zit een easter egg in. Veel plezier met zoeken ;)
 
 ## Bronnenlijst
 
