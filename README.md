@@ -142,6 +142,17 @@ Ik heb geexperimenteerd met de light-dark color scheme, maar met de responsivene
 Ik ben erachter gekomen dat je heel veel kan doen met css zonder javascript. Vooral met containers en met has() kan je heel veel krachtige dingen met css. Ook ben ik achter veel pseudo-classes gekomen.
 Ik wil voor volgende projecten nog meer achter de kracht van has() komen, want volgensmij kan ik daar nog veel meer mee doen dan wat ik nu gedaan heb.
 
+<img width="712" height="474" alt="image" src="https://github.com/user-attachments/assets/037c46a7-0a91-4b46-9e7b-3ee8953dc320" />
+
+<img width="711" height="426" alt="image" src="https://github.com/user-attachments/assets/4f8f62e5-e946-49aa-9c9a-72dae5add2e8" />
+
+<img width="715" height="398" alt="image" src="https://github.com/user-attachments/assets/64d49c56-658c-4fcf-a571-8ad96cc94566" />
+
+<img width="710" height="409" alt="image" src="https://github.com/user-attachments/assets/d8e61b6c-1fc7-4768-946d-127670b6aa55" />
+
+<img width="552" height="642" alt="image" src="https://github.com/user-attachments/assets/4ebbd003-dbc6-40bf-945f-c1a8cbd8040d" />
+
+
 
 ### Easter eggs
 Er zit een easter egg in. Veel plezier met zoeken
