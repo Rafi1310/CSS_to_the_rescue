@@ -15,15 +15,18 @@
             <div></div>
 
             <div>
-                <button> > </button>
-                <button> > </button>
-                <button> > </button>
-                <button> > </button>
+                <label><input type="radio" name="game" value="up"> > </label>
+                <label><input type="radio" name="game" value="right"> > </label>
+                <label><input type="radio" name="game" value="left"> > </label>
+                <label><input type="radio" name="game" value="down"> > </label>
             </div>
         </div>
 
         <div>
             <div>Nintendo Switch</div>
+            <label>
+                <input type="checkbox" value="power">
+            </label>
         </div>
 
         <div>
@@ -44,9 +47,13 @@
     <label>8-bit
         <input type="checkbox" value="retro">
     </label>
+    <label>Helderheid
+        <input type="range" name="helderheid" min="10" max="100" value="100">
+    </label>
     <label>unreadable
         <input type="checkbox" value="unreadable">
     </label> <!-- easter egg -->
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -59,6 +59,17 @@ body > div:first-of-type > div:nth-child(2) {
   color: white;
   font-size: 2em;
   font-family: pretendo, "impact";
+
+  filter: brightness(calc(var(--helderheid, 100) * 1%));
+
+  background-image: var(--game-bg, none);
+  background-size: cover; 
+  background-position: center; 
+  position: relative; 
+
+  border: 15px solid #111;
+  box-sizing: border-box;
+  
 }
 
 /*RECHTER JOY-CON*/
@@ -78,37 +89,19 @@ body > div:first-of-type > div:nth-child(3) > div:nth-child(2) {
   aspect-ratio: 1 / 1; 
   background-color: #222;
   border-radius: 50%;
+  box-shadow: 1em 1em .5em #0003;
+  background-image: radial-gradient(at 30% 30%, #fff3, transparent);
 }
 
-/*Button pijltje omhoog*/
-body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(1) {
-    rotate: 225deg;
-    color: var(--txt-color-btn);
-}
-
-/*Button pijltje naar rechts*/
-body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(2) {
-    rotate: 320deg;
-    color: var(--txt-color-btn);
-}
-
-/*Button pijltje naar links*/
-body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(3) {
-    rotate: 140deg;
-    color: var(--txt-color-btn);
-}
-
-/*Button pijltje omlaag*/
-body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > button:nth-child(4) {
-    rotate: 45deg;
-    color: var(--txt-color-btn);
-}
 
 /*Buttons A, B, X, Y*/
 body > div:first-of-type > div:nth-child(3) > div:nth-child(1) > button {
     rotate: -45deg;
     color: var(--txt-color-btn);
 }
+
+
+
 
 /*DE KNOPPEN GRIDS*/
 body > div:first-of-type > div:nth-child(1) > div:nth-child(2),
@@ -139,18 +132,223 @@ body > div:first-of-type button:active {
   background-color: #000; 
 }
 
-label {
-  display: inline-block;
+/*TITEL STYLING*/
+
+body > div:first-of-type > div:nth-child(2) > div {
+  text-transform: uppercase; 
+  letter-spacing: 4px; 
+  text-shadow: 
+    3px 3px 0px #000, 
+    0px 0px 15px rgba(255, 255, 255, 0.4); 
+  z-index: 2; 
+}
+
+/*CONTROLS ONDERAAN DE PAGINA*/
+
+
+body > label {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px; 
+  background-color: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(8px); 
+  padding: 12px 20px;
+  margin: 10px 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
   font-family: sans-serif;
-  font-size: 1.5em;
-  color: black;
+  font-size: 1.2em;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-label:nth-of-type(3) {
+
+body > label:hover {
+  transform: translateY(-3px);
+}
+
+
+body > label > input[type="range"] {
+  accent-color: var(--clr-right); 
+  cursor: pointer;
+  width: 130px; 
+}
+
+
+body > label:nth-of-type(4) {
   opacity: 0;
+  cursor: default;
+}
+
+/*============================================= 
+LINKER JOY-CON
+==============================================*/
+
+/* Vormgeving van de labels (pijltjes) */
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    background-color: #111;
+    border-radius: 50%;
+    cursor: pointer; 
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+/* Verberg de radio-bolletjes */
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > label > input {
+    display: none;
+}
+
+/* Krimp-effect bij indrukken */
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > label:active {
+    transform: scale(0.85);
+    background-color: #000; 
+}
+
+/* De pijltjes weer in de juiste richting draaien */
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > label:nth-child(1) {
+   rotate: 225deg; 
+   color: var(--txt-color-btn); 
+}
+
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > label:nth-child(2) {
+   rotate: 320deg; 
+   color: var(--txt-color-btn);
+}
+
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > label:nth-child(3) {
+   rotate: 140deg; 
+   color: var(--txt-color-btn); 
+}
+
+body > div:first-of-type > div:nth-child(1) > div:nth-child(2) > label:nth-child(4) {
+   rotate: 45deg; 
+   color: var(--txt-color-btn); 
+}
+
+/* Welke game is gekozen met de pijltjes? */
+html:has(input[value="up"]:checked) { 
+    --game-titel: "Mario"; 
+    --game-bg: linear-gradient(#ed3040, #ed3040); 
+    --char-standaard: url('images/mario.png'); /*https://www.mariowiki.com/images/thumb/2/25/Mario_New_Super_Mario_Bros_U_Deluxe.png/*/
+    --char-actie-1: url('images/mario_1.png'); /*https://www.stickpng.com/img/games/new-super-mario-bros/mario*/
+    --char-actie-2: url('images/mario_2.png'); /*https://www.stickpng.com/img/games/new-super-mario-bros/mario-stars*/
+    --char-actie-3: url('images/mario_3.png'); /*https://www.stickpng.com/img/games/new-super-mario-bros/mario-with-shell*/
+    --char-actie-4: url('images/mario_4.png'); /*https://www.stickpng.com/img/games/new-super-mario-bros/mario-riding-yoshi*/
+}
+html:has(input[value="right"]:checked) { 
+    --game-titel: "Kirby"; 
+    --game-bg: linear-gradient(#ee3eb1, #ee3eb1); 
+    --char-standaard: url('images/kirby.png'); /*https://toppng.com/show_download/280389/kirby-the-pink-puff-kirby-return-to-dreamland-kirby*/
+    --char-actie-1: url('images/kirby_1.png'); /*https://www.clipartmax.com/middle/m2i8m2b1i8d3i8K9_kirby-star2-kirby-nintendo/*/
+    --char-actie-2: url('images/kirby_2.png'); /*https://www.clipartmax.com/max/m2H7i8b1i8i8b1N4/*/
+    --char-actie-3: url('images/kirby_3.png'); /*https://www.clipartmax.com/middle/m2H7K9b1H7G6m2d3_kirby-planet-robobot-kirby-nintendo/*/
+    --char-actie-4: url('images/kirby_4.png'); /*https://wikirby.com/wiki/Sleep*/
+}
+html:has(input[value="left"]:checked) { 
+    --game-titel: "Sonic"; 
+    --game-bg: linear-gradient(#5d70ee, #5d70ee); 
+    --char-standaard: url('images/sonic.png'); /*https://www.stickpng.com/img/games/sonic/sonic-hedgehog-standing-blue*/
+    --char-actie-1: url('images/sonic_1.png'); /*https://www.stickpng.com/img/games/sonic/sonic-hedgehog-one-foot-stranding*/
+    --char-actie-2: url('images/sonic_2.png'); /*https://www.stickpng.com/img/games/sonic/sonic-hedgehog-blue-ok*/
+    --char-actie-3: url('images/sonic_3.png'); /*https://www.stickpng.com/img/games/sonic/sonic-hedgehog-surf*/
+    --char-actie-4: url('images/sonic_4.png'); /*https://www.clipartmax.com/middle/m2i8N4G6b1Z5m2m2_break-dance-by-xrubimalonex-sonic-the-hedgehog-dance/*/
+}
+html:has(input[value="down"]:checked) { 
+    --game-titel: "Pikachu"; 
+    --game-bg: linear-gradient(#edde58, #edde58); 
+    --char-standaard: url('images/pikachu.png'); /*https://zarude.pokemon.com/nl-nl/*/
+    --char-actie-1: url('images/pikachu_1.png'); /*https://www.pngwing.com/en/free-png-yybmj*/
+    --char-actie-2: url('images/pikachu_2.png'); /*https://www.pngwing.com/en/free-png-nbiqf*/
+    --char-actie-3: url('images/pikachu_3.png'); /*https://www.pngwing.com/en/free-png-bxzuo*/
+    --char-actie-4: url('images/pikachu_4.png'); /*https://www.pngwing.com/en/free-png-meyjf*/
+}
+
+/*=============================
+RECHTER JOYCON
+==============================*/
+
+/* X-Knop (1e knop) */
+body:has(> div:first-of-type > div:nth-child(3) > div:nth-child(1) > button:nth-child(1):active) {
+    --char-actie: var(--char-actie-2); 
+    --char-y: -50px;
+}
+
+/* A-Knop (2e knop) */
+body:has(> div:first-of-type > div:nth-child(3) > div:nth-child(1) > button:nth-child(2):active) {
+    --char-actie: var(--char-actie-1); 
+    --char-y: -50px; 
+}
+
+/* Y-Knop (3e knop) */
+body:has(> div:first-of-type > div:nth-child(3) > div:nth-child(1) > button:nth-child(3):active) {
+    --char-actie: var(--char-actie-3); 
+    --char-y: -50px; 
+}
+
+/* B-Knop (4e knop) */
+body:has(> div:first-of-type > div:nth-child(3) > div:nth-child(1) > button:nth-child(4):active) {
+    --char-actie: var(--char-actie-4); 
+    --char-y: -50px; 
+}
+
+/*DE TITEL BOVENIN*/
+body > div:first-of-type > div:nth-child(2) > div {
+  position: absolute;
+  top: var(--titel-y, 50%); 
+  transform: var(--titel-transform, translateY(-50%));
+  
+  width: 100%;
+  text-align: center;
+  font-size: 0; /* Verbergt de originele HTML tekst */
+  z-index: 2;   
+  
+  transition: top 0.4s ease, transform 0.4s ease, opacity 0.3s ease;
 }
 
 
+html:has(input[name="game"]:checked) {
+  --titel-y: 35px;
+  --titel-transform: translateY(0);
+}
+
+body > div:first-of-type > div:nth-child(2) > div::after {
+  content: var(--game-titel, "Nintendo Switch"); 
+  font-size: 30px; 
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.8); 
+  display: block;
+}
+
+/*============================================= 
+HET KARAKTER
+==============================================*/
+body > div:first-of-type > div:nth-child(2)::before {
+  content: ""; 
+  position: absolute;
+  bottom: 40px; 
+  left: 50%; 
+  margin-left: -75px; 
+  
+  width: 150px;
+  height: 150px;
+  
+  
+  background-image: var(--char-actie, var(--char-standaard, none));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  
+  
+  transform: translateY(var(--char-y, 0px)) scaleX(var(--char-richting, 1));
+  transition: transform 0.1s ease-out; 
+  
+  z-index: 1; 
+}
 
 /*=================================
 MOBIELE LAY-OUT (Bij minder 600px) 
@@ -273,6 +471,39 @@ html:has([value="unreadable"]:checked) {
     box-shadow: 0 0 25px rgb(11 83 3 / 0.843); 
     transform: scale(0.95);
   }
+
+  body:has(input[value="up"]:checked) { 
+    --char-standaard: url('images/mario_8bit.png'); /*https://www.nicepng.com/maxp/u2w7a9e6r5r5u2e6/*/
+    --char-actie-1: url('images/mario_8bit.png'); 
+    --char-actie-2: url('images/mario_8bit.png'); 
+    --char-actie-3: url('images/mario_8bit.png'); 
+    --char-actie-4: url('images/mario_8bit.png'); 
+}
+
+  body:has(input[value="right"]:checked) { 
+    --char-standaard: url('images/kirby_8bit.png'); /*https://www.nicepng.com/maxp/u2e6a9o0o0a9y3u2/#google_vignette*/
+    --char-actie-1: url('images/kirby_8bit.png'); 
+    --char-actie-2: url('images/kirby_8bit.png'); 
+    --char-actie-3: url('images/kirby_8bit.png'); 
+    --char-actie-4: url('images/kirby_8bit.png'); 
+}
+
+  body:has(input[value="left"]:checked) { 
+    --char-standaard: url('images/sonic_8bit.png'); /*https://www.nicepng.com/maxp/u2w7r5r5t4t4o0a9/*/
+    --char-actie-1: url('images/sonic_8bit.png'); 
+    --char-actie-2: url('images/sonic_8bit.png'); 
+    --char-actie-3: url('images/sonic_8bit.png'); 
+    --char-actie-4: url('images/sonic_8bit.png'); 
+}
+
+  body:has(input[value="down"]:checked) { 
+    --char-standaard: url('images/pikachu_8bit.png'); /*https://toppng.com/free-image/8bit-pikachu-pikachu-8-bit-PNG-free-PNG-Images_175978*/
+    --char-actie-1: url('images/pikachu_8bit.png'); 
+    --char-actie-2: url('images/pikachu_8bit.png'); 
+    --char-actie-3: url('images/pikachu_8bit.png'); 
+    --char-actie-4: url('images/pikachu_8bit.png'); 
+}
+
 }
 
 @container style(--donker:true) and style(--retro:true) {
@@ -298,5 +529,64 @@ html:has([value="unreadable"]:checked) {
 @container style(--unreadable:true) {
   body > div:first-of-type > div:nth-child(2) {
     font-family: controllers;
+  }
+}
+
+/* FYSIEKE POWER KNOP OP DE SWITCH */
+
+
+body > div:first-of-type > div:nth-child(2) {
+  position: relative;
+}
+
+/* Het <label> een fysiek uitstekend knopje aan de bovenkant */
+body > div:first-of-type > div:nth-child(2) > label {
+  position: absolute;
+  top: -25px;        
+  left: 30px;        
+  width: 40px; 
+  height: 10px;
+  background-color: #222;
+  border-radius: 5px 5px 0 0; 
+  cursor: pointer;
+}
+
+
+body > div:first-of-type > div:nth-child(2) > label > input {
+  display: none; 
+}
+
+/*Voegt een klein indruk-effect toe als je erop klikt */
+body > div:first-of-type > div:nth-child(2) > label:active {
+  top: -22px;
+  height: 7px;
+}
+
+
+body > div:first-of-type > div:nth-child(2),
+body > div:first-of-type > div:nth-child(2) > div {
+  transition: all 0.3s ease-in-out;
+}
+
+
+html:has([value="power"]:not(:checked)) {
+  --power-off: true;
+}
+
+
+@container style(--power-off: true) {
+  
+  body > div:first-of-type > div:nth-child(2) {
+    background-color: #050505;
+    background-image: none; 
+  }
+  
+  body > div:first-of-type > div:nth-child(2) > div {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+ 
+  body > div:first-of-type > div:nth-child(2)::before {
+    opacity: 0;
   }
 }
